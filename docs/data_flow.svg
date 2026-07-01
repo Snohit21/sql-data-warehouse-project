@@ -1,0 +1,91 @@
+<svg width="1150" height="700" viewBox="0 0 1150 700" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1150" height="700" fill="#ffffff"/>
+  <text x="575" y="45" text-anchor="middle" font-size="26" font-weight="700" fill="#1a1a1a">Data flow (lineage)</text>
+
+  <text x="100" y="100" font-size="16" font-weight="700" fill="#1a1a1a">Sources</text>
+  <rect x="50" y="120" width="160" height="560" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="6"/>
+  <rect x="75" y="270" width="110" height="46" rx="4" fill="#FAC775" stroke="#BA7517"/>
+  <text x="130" y="298" text-anchor="middle" font-size="13" fill="#412402">CRM</text>
+  <rect x="75" y="480" width="110" height="46" rx="4" fill="#FAC775" stroke="#BA7517"/>
+  <text x="130" y="508" text-anchor="middle" font-size="13" fill="#412402">ERP</text>
+
+  <!-- Bronze -->
+  <text x="370" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a1a">Bronze</text>
+  <rect x="260" y="120" width="220" height="560" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="6"/>
+  <g fill="#FAEEDA" stroke="#BA7517">
+    <rect x="285" y="160" width="170" height="36" rx="5"/>
+    <rect x="285" y="210" width="170" height="36" rx="5"/>
+    <rect x="285" y="260" width="170" height="36" rx="5"/>
+    <rect x="285" y="370" width="170" height="36" rx="5"/>
+    <rect x="285" y="420" width="170" height="36" rx="5"/>
+    <rect x="285" y="470" width="170" height="36" rx="5"/>
+  </g>
+  <g font-size="11.5" fill="#412402" text-anchor="middle">
+    <text x="370" y="183">crm_cust_info</text>
+    <text x="370" y="233">crm_prd_info</text>
+    <text x="370" y="283">crm_sales_details</text>
+    <text x="370" y="393">erp_cust_az12</text>
+    <text x="370" y="443">erp_loc_a101</text>
+    <text x="370" y="493">erp_px_cat_g1v2</text>
+  </g>
+
+  <!-- Silver -->
+  <text x="650" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a1a">Silver</text>
+  <rect x="540" y="120" width="220" height="560" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="6"/>
+  <g fill="#F1EFE8" stroke="#5F5E5A">
+    <rect x="565" y="160" width="170" height="36" rx="5"/>
+    <rect x="565" y="210" width="170" height="36" rx="5"/>
+    <rect x="565" y="260" width="170" height="36" rx="5"/>
+    <rect x="565" y="370" width="170" height="36" rx="5"/>
+    <rect x="565" y="420" width="170" height="36" rx="5"/>
+    <rect x="565" y="470" width="170" height="36" rx="5"/>
+  </g>
+  <g font-size="11.5" fill="#2C2C2A" text-anchor="middle">
+    <text x="650" y="183">crm_cust_info</text>
+    <text x="650" y="233">crm_prd_info</text>
+    <text x="650" y="283">crm_sales_details</text>
+    <text x="650" y="393">erp_cust_az12</text>
+    <text x="650" y="443">erp_loc_a101</text>
+    <text x="650" y="493">erp_px_cat_g1v2</text>
+  </g>
+
+  <!-- Gold -->
+  <text x="950" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a1a">Gold</text>
+  <rect x="850" y="120" width="240" height="560" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="6"/>
+  <g fill="#FAEEDA" stroke="#BA7517">
+    <rect x="875" y="240" width="190" height="42" rx="5"/>
+    <rect x="875" y="340" width="190" height="42" rx="5"/>
+    <rect x="875" y="440" width="190" height="42" rx="5"/>
+  </g>
+  <g font-size="13" font-weight="600" fill="#412402" text-anchor="middle">
+    <text x="970" y="266">fact_sales</text>
+    <text x="970" y="366">dim_customers</text>
+    <text x="970" y="466">dim_products</text>
+  </g>
+
+  <!-- arrows source -> bronze -->
+  <path d="M185 293 H280" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M185 503 H280" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- arrows bronze -> silver (straight rows) -->
+  <path d="M455 178 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M455 228 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M455 278 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M455 388 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M455 438 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M455 488 H585" stroke="#bbb" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- arrows silver -> gold (converging) -->
+  <path d="M735 178 C 800 178, 800 261, 870 261" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M735 278 C 800 278, 800 261, 870 261" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M735 228 C 820 228, 820 361, 870 361" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M735 393 C 820 393, 820 361, 870 361" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M735 443 C 820 443, 820 461, 870 461" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M735 233 C 800 233, 800 461, 870 461" stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#999" stroke-width="1.5"/>
+    </marker>
+  </defs>
+</svg>

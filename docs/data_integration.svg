@@ -1,0 +1,60 @@
+<svg width="1150" height="640" viewBox="0 0 1150 640" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1150" height="640" fill="#ffffff"/>
+  <text x="575" y="45" text-anchor="middle" font-size="26" font-weight="700" fill="#1a1a1a">Data integration</text>
+  <text x="575" y="70" text-anchor="middle" font-size="14" fill="#666">How source tables relate to each other</text>
+
+  <!-- CRM group -->
+  <text x="270" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">CRM</text>
+  <rect x="60" y="125" width="420" height="470" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="10"/>
+
+  <!-- ERP group -->
+  <text x="880" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">ERP</text>
+  <rect x="670" y="125" width="420" height="470" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" rx="10"/>
+
+  <!-- crm_sales_details -->
+  <rect x="90" y="300" width="220" height="100" rx="6" fill="#CECBF6" stroke="#534AB7"/>
+  <text x="200" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#26215C">crm_sales_details</text>
+  <text x="200" y="346" text-anchor="middle" font-size="11" fill="#3C3489">prd_key, cst_id</text>
+  <text x="200" y="364" text-anchor="middle" font-size="11" fill="#3C3489">sales_amount, quantity</text>
+  <text x="200" y="382" text-anchor="middle" font-size="11" fill="#3C3489">order/ship/due dates</text>
+
+  <!-- crm_prd_info -->
+  <rect x="340" y="180" width="180" height="80" rx="6" fill="#CECBF6" stroke="#534AB7"/>
+  <text x="430" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#26215C">crm_prd_info</text>
+  <text x="430" y="224" text-anchor="middle" font-size="11" fill="#3C3489">prd_key (PK link)</text>
+  <text x="430" y="242" text-anchor="middle" font-size="11" fill="#3C3489">product attributes</text>
+
+  <!-- crm_cust_info -->
+  <rect x="340" y="440" width="180" height="80" rx="6" fill="#CECBF6" stroke="#534AB7"/>
+  <text x="430" y="464" text-anchor="middle" font-size="13" font-weight="700" fill="#26215C">crm_cust_info</text>
+  <text x="430" y="484" text-anchor="middle" font-size="11" fill="#3C3489">cst_id, cst_key</text>
+  <text x="430" y="502" text-anchor="middle" font-size="11" fill="#3C3489">customer attributes</text>
+
+  <!-- ERP boxes -->
+  <rect x="700" y="160" width="200" height="80" rx="6" fill="#9FE1CB" stroke="#0F6E56"/>
+  <text x="800" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#04342C">erp_px_cat_g1v2</text>
+  <text x="800" y="204" text-anchor="middle" font-size="11" fill="#085041">product categories</text>
+  <text x="800" y="222" text-anchor="middle" font-size="11" fill="#085041">id → category</text>
+
+  <rect x="700" y="300" width="200" height="80" rx="6" fill="#9FE1CB" stroke="#0F6E56"/>
+  <text x="800" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#04342C">erp_cust_az12</text>
+  <text x="800" y="344" text-anchor="middle" font-size="11" fill="#085041">extra customer info</text>
+  <text x="800" y="362" text-anchor="middle" font-size="11" fill="#085041">cid, birthdate</text>
+
+  <rect x="700" y="440" width="200" height="80" rx="6" fill="#9FE1CB" stroke="#0F6E56"/>
+  <text x="800" y="464" text-anchor="middle" font-size="13" font-weight="700" fill="#04342C">erp_loc_a101</text>
+  <text x="800" y="484" text-anchor="middle" font-size="11" fill="#085041">customer location</text>
+  <text x="800" y="502" text-anchor="middle" font-size="11" fill="#085041">cid, country</text>
+
+  <!-- Relations -->
+  <path d="M310 330 H 340 220" stroke="#bbb" stroke-width="1.5" fill="none"/>
+  <path d="M310 350 L 510 350 L 510 220 L 520 220" stroke="#bbb" stroke-width="1.5" fill="none"/>
+  <path d="M310 380 L 510 380 L 510 480 L 520 480" stroke="#bbb" stroke-width="1.5" fill="none"/>
+
+  <path d="M520 220 L700 200" stroke="#bbb" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/>
+  <path d="M520 480 L700 340" stroke="#bbb" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/>
+  <path d="M520 480 L700 480" stroke="#bbb" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/>
+
+  <text x="575" y="555" text-anchor="middle" font-size="12" fill="#666">CRM transactional tables are enriched with ERP reference data</text>
+  <text x="575" y="573" text-anchor="middle" font-size="12" fill="#666">via shared keys (prd_key, cst_id / cid) before the Gold layer merge</text>
+</svg>

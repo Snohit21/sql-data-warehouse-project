@@ -1,0 +1,56 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="600" fill="#ffffff"/>
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Sales data mart — star schema</text>
+
+  <!-- dim_customers -->
+  <rect x="60" y="100" width="280" height="400" rx="6" fill="#FAEEDA" stroke="#BA7517"/>
+  <rect x="60" y="100" width="280" height="36" rx="6" fill="#FAC775"/>
+  <text x="200" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#412402">gold.dim_customers</text>
+  <g font-size="12.5" fill="#412402">
+    <text x="80" y="160" font-weight="700">PK  customer_key</text>
+    <text x="80" y="185">customer_id</text>
+    <text x="80" y="207">customer_number</text>
+    <text x="80" y="229">first_name / last_name</text>
+    <text x="80" y="251">country</text>
+    <text x="80" y="273">marital_status</text>
+    <text x="80" y="295">gender</text>
+    <text x="80" y="317">birthdate</text>
+    <text x="80" y="339">create_date</text>
+  </g>
+
+  <!-- fact_sales -->
+  <rect x="460" y="160" width="280" height="280" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+  <rect x="460" y="160" width="280" height="36" rx="6" fill="#85B7EB"/>
+  <text x="600" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#042C53">gold.fact_sales</text>
+  <g font-size="12.5" fill="#042C53">
+    <text x="480" y="220">order_number</text>
+    <text x="480" y="242" font-weight="700">FK  product_key</text>
+    <text x="480" y="264" font-weight="700">FK  customer_key</text>
+    <text x="480" y="286">order_date / ship_date</text>
+    <text x="480" y="308">due_date</text>
+    <text x="480" y="330">sales_amount</text>
+    <text x="480" y="352">quantity / price</text>
+  </g>
+  <text x="600" y="460" text-anchor="middle" font-size="12" fill="#666">sales_amount = quantity × price</text>
+
+  <!-- dim_products -->
+  <rect x="860" y="100" width="280" height="400" rx="6" fill="#FAEEDA" stroke="#BA7517"/>
+  <rect x="860" y="100" width="280" height="36" rx="6" fill="#FAC775"/>
+  <text x="1000" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#412402">gold.dim_products</text>
+  <g font-size="12.5" fill="#412402">
+    <text x="880" y="160" font-weight="700">PK  product_key</text>
+    <text x="880" y="185">product_id / number</text>
+    <text x="880" y="207">product_name</text>
+    <text x="880" y="229">category / subcategory</text>
+    <text x="880" y="251">maintenance</text>
+    <text x="880" y="273">cost</text>
+    <text x="880" y="295">product_line</text>
+    <text x="880" y="317">start_date</text>
+  </g>
+
+  <!-- relationship lines -->
+  <path d="M340 280 H460" stroke="#999" stroke-width="1.5" fill="none"/>
+  <text x="400" y="272" text-anchor="middle" font-size="11" fill="#666">1 — ∞</text>
+  <path d="M740 280 H860" stroke="#999" stroke-width="1.5" fill="none"/>
+  <text x="800" y="272" text-anchor="middle" font-size="11" fill="#666">∞ — 1</text>
+</svg>
